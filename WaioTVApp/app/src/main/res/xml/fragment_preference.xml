@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="System">
+
+        <Preference android:key="opensettings" android:title="System Settings">
+            <intent android:action="android.provider.Settings.ACTION_SETTINGS">
+            </intent>
+        </Preference>
+
+        <Preference android:key="openwifisettings" android:title="Wifi Settings">
+            <intent android:action="android.provider.Settings.ACTION_SETTINGS">
+            </intent>
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="App">
+
+
+      <!--  <ListPreference
+            android:key="appMode"
+            android:entries="@array/appModes"
+            android:entryValues="@array/appModesVal"
+            android:defaultValue="CannStat"
+            android:summary="Select the running mode"
+            android:title="Running Mode" />
+-->
+        <EditTextPreference
+            android:key="ScreenID"
+            android:defaultValue="0"
+            android:summary="Screen ID"
+            android:title="Set the Menu Screen ID" />
+
+        <EditTextPreference
+            android:key="screenURL"
+            android:defaultValue="https://app.waiosoft.com/screens"
+            android:summary="If using a custom screen server. You likely do not need to change this."
+            android:title="Set the Screen URL" />
+
+
+        <!--<CheckBoxPreference
+            android:key="checkBoxPref"
+            android:title="check it out"
+            android:summary="click this little box"/>
+-->
+    </PreferenceCategory>
+
+</PreferenceScreen>
